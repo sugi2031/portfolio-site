@@ -78,7 +78,6 @@ body {
 }
 
 .gallery-item {
-  height: 480px;
   overflow: hidden;
 }
 
@@ -92,23 +91,14 @@ body {
 
 /* CONTACTセクション */
 .contact {
-  display: flex;
   background-color: #ddd;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-  align-items: stretch;
-  position: relative;
+  padding: 60px 20px;
 }
 
 .contact-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
-  width: 100%;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  padding-left: 20px;
 }
 
 .contact-container {
@@ -117,7 +107,6 @@ body {
   align-items: stretch;
   gap: 40px;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .contact-img {
@@ -136,9 +125,6 @@ body {
   min-width: 300px;
   padding: 20px;
   background-color: #ddd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 form {
@@ -164,7 +150,7 @@ button {
   padding: 10px 20px;
   background-color: transparent;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   display: flex;
@@ -172,8 +158,11 @@ button {
   gap: 8px;
 }
 
-button i {
-  transform: rotate(0deg); /* 水平方向に */
+/* SENDボタンの紙飛行機を水平に修正 */
+.contact-form i.fa-paper-plane {
+  transform: rotate(0deg);  /* ← ここが今回の修正 */
+  display: inline-block;
+  margin-right: 5px;
 }
 
 /* フッター */
@@ -202,7 +191,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .contact {
+  .contact-container {
     flex-direction: column;
   }
 
@@ -211,9 +200,11 @@ footer {
     width: 100%;
   }
 
-  .contact-title {
-    position: relative;
-    top: 0;
-    margin-bottom: 10px;
+  .gallery-item {
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
   }
 }
