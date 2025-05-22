@@ -82,8 +82,9 @@ body {
   border-radius: 4px;
 }
 
+/* photo4.jpg の画像サイズ調整 */
 .gallery-item {
-  height: 480px; /* photo3.jpg に合わせた高さ */
+  height: 480px; /* photo3.jpg の高さに合わせる */
   overflow: hidden;
 }
 
@@ -195,16 +196,12 @@ footer {
   .contact-form {
     width: 100%;
   }
-}
-/* photo4.jpg の画像だけ特別に高さを固定 */
-.gallery-item {
-  height: auto;
-}
 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2; /* 必要に応じて比率を調整。photo3と近い比率 */
-  object-fit: cover;
-  display: block;
+  .gallery-item {
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
+  }
 }
