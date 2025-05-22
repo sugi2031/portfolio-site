@@ -78,7 +78,7 @@ body {
 }
 
 .gallery-item {
-  height: 480px; /* photo3.jpg に合わせる */
+  height: 480px;
   overflow: hidden;
 }
 
@@ -87,13 +87,12 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
 }
 
 /* CONTACTセクション */
 .contact {
   background-color: #ddd;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .contact-title {
@@ -146,28 +145,23 @@ textarea {
   box-sizing: border-box;
 }
 
-/* SENDボタンのスタイル（見本どおり） */
+/* SENDボタン調整 */
 button {
+  align-self: center;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #333;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
+  gap: 6px;
 }
 
-button i {
-  font-size: 16px;
-  transform: rotate(0deg); /* ← これで右向きに */
+button i.send-icon {
+  transform: rotate(0deg); /* 水平表示 */
 }
-
-
 
 /* フッター */
 footer {
@@ -202,13 +196,5 @@ footer {
   .contact-img,
   .contact-form {
     width: 100%;
-  }
-
-  .gallery-item {
-    height: auto;
-  }
-
-  .gallery-item img {
-    height: auto;
   }
 }
