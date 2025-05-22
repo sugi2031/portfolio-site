@@ -70,6 +70,7 @@ body {
   margin: 0 auto;
 }
 
+/* ギャラリー */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,14 +78,9 @@ body {
   margin-top: 40px;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* photo4.jpg の画像サイズ調整 */
+/* ギャラリー画像の枠と画像の揃え方 */
 .gallery-item {
-  height: 480px; /* photo3.jpg の高さに合わせる */
+  height: 480px; /* photo3.jpg に合わせる基準高さ */
   overflow: hidden;
 }
 
@@ -93,6 +89,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 4px;
 }
 
 /* CONTACTセクション */
@@ -188,6 +185,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .gallery-item {
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
+  }
+
   .contact-container {
     flex-direction: column;
   }
@@ -195,13 +200,5 @@ footer {
   .contact-img,
   .contact-form {
     width: 100%;
-  }
-
-  .gallery-item {
-    height: auto;
-  }
-
-  .gallery-item img {
-    height: auto;
   }
 }
