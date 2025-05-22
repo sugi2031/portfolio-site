@@ -1,11 +1,10 @@
 /* 共通設定 */
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: sans-serif;
   background-color: #f4f4f4;
   color: #333;
   max-width: 960px;
-  margin: 0 auto;
 }
 
 /* ヘッダー */
@@ -46,7 +45,7 @@ body {
   font-weight: bold;
 }
 
-/* WORKSセクション */
+/* WORKS セクション */
 .works {
   background-color: white;
   padding: 60px 20px;
@@ -70,7 +69,6 @@ body {
   margin: 0 auto;
 }
 
-/* ギャラリー */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -78,9 +76,8 @@ body {
   margin-top: 40px;
 }
 
-/* ギャラリー画像の枠と画像の揃え方 */
 .gallery-item {
-  height: 480px; /* photo3.jpg に合わせる基準高さ */
+  height: 480px; /* photo3の高さ基準に固定 */
   overflow: hidden;
 }
 
@@ -92,7 +89,7 @@ body {
   border-radius: 4px;
 }
 
-/* CONTACTセクション */
+/* CONTACT セクション */
 .contact {
   background-color: #ddd;
   padding: 40px 20px;
@@ -168,7 +165,7 @@ footer {
   border-top: 1px solid #ccc;
 }
 
-/* レスポンシブ対応 */
+/* レスポンシブ */
 @media screen and (max-width: 768px) {
   .header-inner {
     flex-direction: column;
@@ -185,14 +182,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .gallery-item {
-    height: auto;
-  }
-
-  .gallery-item img {
-    height: auto;
-  }
-
   .contact-container {
     flex-direction: column;
   }
@@ -200,5 +189,13 @@ footer {
   .contact-img,
   .contact-form {
     width: 100%;
+  }
+
+  .gallery-item {
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
   }
 }
