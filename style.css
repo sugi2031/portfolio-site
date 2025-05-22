@@ -160,10 +160,11 @@ button {
 
 /* SENDボタンの紙飛行機を水平に修正 */
 .contact-form i.fa-paper-plane {
-  transform: rotate(0deg);  /* ← ここが今回の修正 */
   display: inline-block;
+  transform: rotate(-45deg); /* ← 水平に向けるには -45度回転 */
   margin-right: 5px;
 }
+
 
 /* フッター */
 footer {
