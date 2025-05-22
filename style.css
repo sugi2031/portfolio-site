@@ -196,3 +196,15 @@ footer {
     width: 100%;
   }
 }
+/* photo4.jpg の画像だけ特別に高さを固定 */
+.gallery-item {
+  height: auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* 必要に応じて比率を調整。photo3と近い比率 */
+  object-fit: cover;
+  display: block;
+}
