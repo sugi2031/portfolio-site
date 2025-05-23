@@ -46,28 +46,31 @@
   </section>
 
   <!-- CONTACT セクション -->
-  <section class="contact">
-    <h2 class="contact-title"><span>|</span> CONTACT</h2>
-    <div class="contact-container">
-      <div class="contact-img">
-        <img src="img/photo5.jpg" alt="お問い合わせ画像">
-      </div>
-      <div class="contact-form">
-        <form>
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name">
-
-          <label for="email">EMAIL ADDRESS</label>
-          <input type="email" id="email" name="email">
-
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message"></textarea>
-
-          <button type="submit"><i class="fas fa-paper-plane fa-rotate-270"></i> SEND</button>
-        </form>
-      </div>
+<section id="contact">
+  <h2 class="section-title"><span>|</span> CONTACT</h2>
+  <div class="contact-container">
+    <div class="contact-img">
+      <img src="img/photo5.jpg" alt="お問い合わせ画像">
     </div>
-  </section>
+    <div class="contact-form">
+      <form>
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">MESSAGE</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">
+          <i class="fas fa-paper-plane"></i> SEND
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
   <!-- フッター -->
   <footer>
