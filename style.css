@@ -1,216 +1,216 @@
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, 'sans-serif';
-  background-color: #f4f4f4;
+  padding: 0;
+  background: #f4f4f4;
+  font-family: 'Noto Sans JP', 'Arial', sans-serif;
   color: #333;
 }
 
-.header-wrap {
-  width: 820px;
+.container {
+  width: 940px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 32px;
-  padding-bottom: 8px;
+  background: #f4f4f4;
 }
 
-h1 {
-  font-size: 38px;
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 0 0;
+}
+
+.header-bar h1 {
+  font-size: 36px;
   font-weight: bold;
-  letter-spacing: 1px;
   margin: 0;
+  letter-spacing: 1px;
+  /* mainvisual画像と左端を揃える */
 }
 
 .sns {
-  margin-top: 8px;
+  display: flex;
+  gap: 16px;
+  margin-right: 6px;
 }
 .sns a {
-  margin-left: 16px;
   color: #333;
-  text-decoration: none;
   font-size: 18px;
+  text-decoration: none;
 }
 
-/* メインビジュアル */
+/* MAIN VISUAL */
 .mainvisual {
-  width: 820px;
-  margin: 0 auto 36px auto;
   position: relative;
+  margin-top: 18px;
 }
+
 .mainvisual img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
   display: block;
-  border-radius: 0;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
 }
+
 .maintext {
   position: absolute;
-  top: 32%;
-  left: 5%;
+  top: 35px;
+  left: 40px;
   color: #fff;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.24);
   line-height: 1.4;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.28);
 }
 
-/* WORKSセクション */
+/* WORKS */
 .works {
-  width: 820px;
-  margin: 0 auto 50px auto;
   background: #fff;
-  padding: 48px 0 10px 0;
+  padding: 50px 0 0 0;
 }
+
 .works h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.2em;
   text-align: left;
 }
+
 .works .subtitle {
   font-size: 20px;
-  margin-bottom: 14px;
+  margin: 0 0 18px 0;
   font-weight: bold;
+  letter-spacing: 0.02em;
 }
+
 .works .description {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
-  max-width: 650px;
-  margin: 0 0 36px 0;
+  max-width: 780px;
+  margin: 0 0 30px 0;
 }
+
 .gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 44px 36px; /* 行列間隔を見本通りに */
-  justify-content: center;
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 42px 42px;
+  justify-items: center;
+  margin-top: 44px;
+  margin-bottom: 60px;
 }
+
 .gallery-item {
-  width: 340px;
-  height: 340px;
-  background: #eee;
+  width: 290px;
+  height: 290px;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: #eee;
 }
+
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* CONTACT見出し */
+/* CONTACT */
 .section-title {
-  width: 820px;
-  margin: 70px auto 0 auto;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  padding-top: 20px;
   letter-spacing: 0.2em;
   text-align: left;
 }
 
-/* CONTACTセクション */
-#contact {
-  width: 820px;
-  margin: 0 auto 36px auto;
-  background: #ddd;
-  padding: 38px 0;
-  border-radius: 0;
-}
-.contact-container {
+.contact {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 48px;
+  flex-direction: row;
+  background: #ddd;
+  padding: 50px 0 60px 0;
+  border-radius: 0;
+  gap: 0;
 }
+
 .contact-img {
   flex: 1;
-  min-width: 320px;
-  max-width: 340px;
+  min-width: 0;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
+  margin-left: 30px;
 }
+
 .contact-img img {
-  width: 100%;
-  height: 320px;
+  width: 340px;
+  height: 340px;
   object-fit: cover;
   border-radius: 6px;
 }
+
 .contact-form {
   flex: 1;
-  min-width: 320px;
-  max-width: 340px;
-  padding: 20px 0;
-  background: #ddd;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 56px;
 }
-form {
+
+.contact-form form {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 350px;
 }
-label {
-  font-size: 14px;
+
+.contact-form label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
 }
-input,
-textarea {
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 9px 12px;
+  padding: 12px;
   font-size: 14px;
-  box-sizing: border-box;
   border: 1px solid #bbb;
   border-radius: 2px;
-  background: #fff;
+  margin-bottom: 6px;
+  font-family: inherit;
+  resize: none;
+  box-sizing: border-box;
 }
-button {
-  align-self: center;
-  margin-top: 8px;
-  padding: 10px 20px;
-  background-color: transparent;
+
+.contact-form button {
+  align-self: flex-end;
+  padding: 10px 26px;
+  background: transparent;
   color: #333;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-weight: bold;
 }
-button i {
+
+.contact-form button i {
   transform: rotate(0deg);
-  font-size: 18px;
+  font-size: 17px;
 }
 
 /* フッター */
 footer {
-  width: 820px;
-  margin: 0 auto;
   text-align: center;
   font-size: 12px;
   color: #666;
-  padding: 20px 0 24px 0;
+  padding: 30px 0 12px 0;
   border-top: 1px solid #ccc;
-  letter-spacing: 0.08em;
-}
-
-/* レスポンシブ */
-@media screen and (max-width: 860px) {
-  .header-wrap, .mainvisual, .works, #contact, .section-title, footer {
-    width: 98vw;
-    min-width: 0;
-    max-width: 100vw;
-  }
-  .gallery-item, .contact-img, .contact-form {
-    min-width: 0;
-    max-width: 100vw;
-  }
-  .contact-container {
-    flex-direction: column;
-    gap: 24px;
-  }
+  background: #f4f4f4;
+  margin-top: 0;
 }
