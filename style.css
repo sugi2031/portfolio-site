@@ -78,32 +78,36 @@ header {
 }
 
 .section-title {
-  margin: 0;
-  padding: 40px 0 20px 40px;
   font-size: 20px;
+  margin: 60px 0 20px 40px;
+}
+
+#contact {
+  background-color: #ddd;
+  padding: 40px 0;
+  width: 100%;
 }
 
 .contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  padding: 0 40px;
   gap: 40px;
+  padding: 0 40px;
 }
 
 .contact-img img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
   display: block;
 }
 
 .contact-form {
-  background-color: #ddd;
-  flex-grow: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 0;
 }
 
 .contact-form form {
@@ -127,12 +131,11 @@ header {
 }
 
 .contact-form textarea {
-  resize: none;
   height: 120px;
+  resize: none;
 }
 
 .contact-form button {
-  align-self: center;
   margin-top: 30px;
   background: none;
   border: none;
@@ -140,19 +143,20 @@ header {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  align-self: center;
 }
 
 .contact-form i.fa-paper-plane {
-  transform: rotate(0deg); /* 水平に右向き */
+  transform: rotate(0deg);
   font-size: 20px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  font-size: 12px;
-  color: #666;
+/* WORKS画像の潰れ対策 */
+.gallery-item img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
 }
+
