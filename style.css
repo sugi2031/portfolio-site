@@ -78,6 +78,7 @@ body {
 }
 
 .gallery-item {
+  height: 480px;
   overflow: hidden;
 }
 
@@ -85,46 +86,51 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 4px;
+  display: block;
 }
 
 /* CONTACTセクション */
 .contact {
-  background-color: #ddd;
-  padding: 60px 20px;
+  padding: 0;
+  margin-top: 60px;
 }
 
 .contact-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .contact-container {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
+  flex-direction: row;
   flex-wrap: wrap;
+  background-color: #ddd;
 }
 
 .contact-img {
   flex: 1;
   min-width: 300px;
+  max-width: 50%;
 }
 
 .contact-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  vertical-align: bottom;
 }
 
 .contact-form {
   flex: 1;
   min-width: 300px;
-  padding: 20px;
-  background-color: #ddd;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 form {
@@ -146,23 +152,21 @@ textarea {
 }
 
 button {
-  align-self: center;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #333;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  align-self: center;
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-/* SENDボタンの紙飛行機を水平に修正 */
-.contact-form i.fa-paper-plane {
-  transform: rotate(0deg);  /* ← ここが今回の修正 */
-  display: inline-block;
-  margin-right: 5px;
+button i {
+  margin-right: 8px;
+  transform: rotate(0deg); /* 水平に修正 */
 }
 
 /* フッター */
@@ -198,13 +202,5 @@ footer {
   .contact-img,
   .contact-form {
     width: 100%;
-  }
-
-  .gallery-item {
-    height: auto;
-  }
-
-  .gallery-item img {
-    height: auto;
   }
 }

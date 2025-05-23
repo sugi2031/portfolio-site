@@ -2,12 +2,13 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO DESIGN</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
   <header>
     <div class="header-inner">
       <h1>PORTFOLIO DESIGN</h1>
@@ -17,43 +18,62 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-    <div class="main-visual">
-      <img src="img/main.jpg" alt="Main Visual">
-      <div class="main-text">
-        <p>Hi.<br>I'm photographer & web designer.<br>Providing a good experience.</p>
-      </div>
-    </div>
   </header>
 
-  <section class="works">
-    <h2>WORKS</h2>
-    <h3>The world is always a decisive moment</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <div class="gallery">
-      <img src="img/photo1.jpg" alt="Bride">
-      <img src="img/photo2.jpg" alt="Milky Way">
-      <img src="img/photo3.jpg" alt="Photographer">
-      <img src="img/photo4.jpg" alt="Cat">
+  <section class="mainvisual">
+    <img src="img/main.png" alt="メイン画像">
+    <div class="maintext">
+      <p>Hi.<br>I’m photographer & web designer.<br>Providing a good experience.</p>
     </div>
   </section>
 
-  <section class="contact">
-    <h2>CONTACT</h2>
-    <div class="contact-inner">
-      <div class="contact-image">
-        <img src="img/photo5.jpg" alt="Photographer Silhouette">
+  <section class="works">
+    <h2><span>|</span> WORKS</h2>
+    <p class="subtitle">The world is always a decisive moment</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+      labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+      et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <div class="gallery">
+      <div class="gallery-item"><img src="img/photo1.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/photo2.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/photo3.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/photo4.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/photo5.jpg" alt=""></div>
+      <div class="gallery-item"><img src="img/photo6.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <h2 class="section-title"><span>|</span> CONTACT</h2>
+
+  <section id="contact">
+    <div class="contact-container">
+      <div class="contact-img">
+        <img src="img/photo7.jpg" alt="お問い合わせ画像">
       </div>
-      <form>
-        <input type="text" placeholder="NAME">
-        <input type="email" placeholder="EMAIL ADDRESS">
-        <textarea placeholder="MESSAGE"></textarea>
-        <button type="submit"><i class="fas fa-paper-plane"></i> SEND</button>
-      </form>
+      <div class="contact-form">
+        <form>
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> SEND
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 PORTFOLIO DESIGN - ALL RIGHTS RESERVED</p>
+    <p>© 2021 PORTFOLIO DESIGN - ALL RIGHTS RESERVED</p>
   </footer>
+
 </body>
 </html>
