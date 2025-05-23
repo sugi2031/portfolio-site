@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #fff;
 }
 
 img {
@@ -10,7 +11,7 @@ img {
 
 header {
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 20px 40px 0 40px;
 }
 
 .header-inner {
@@ -42,58 +43,67 @@ header {
   color: white;
   font-size: 24px;
   line-height: 1.6;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
 
 .works {
-  padding: 60px 40px;
+  padding: 60px 0 40px 0;
   background: #fff;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .works h2 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 40px;
+  font-weight: bold;
 }
 
 .works .subtitle {
   font-size: 16px;
   color: #333;
-  margin-bottom: 10px;
+  margin: 0 0 10px 40px;
 }
 
 .works .description {
   font-size: 14px;
   color: #555;
-  margin-bottom: 30px;
+  margin: 0 0 30px 40px;
   line-height: 1.8;
+  max-width: 650px;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 40px 40px;
   justify-items: center;
+  max-width: 850px;
+  margin: 40px auto 0 auto;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 480px;
+  height: 380px;
   object-fit: cover;
+  border-radius: 2px;
+  background: #eee;
 }
 
 .section-title {
   font-size: 20px;
+  font-weight: bold;
   margin: 80px 0 20px 40px;
 }
 
 #contact {
   background-color: #ddd;
-  padding: 40px 0;
+  padding: 40px 0 60px 0;
 }
 
 .contact-container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
@@ -102,12 +112,17 @@ header {
 
 .contact-img {
   flex: 1 1 50%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
 }
 
 .contact-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  min-height: 340px;
+  background: #fff;
 }
 
 .contact-form {
@@ -135,15 +150,16 @@ header {
   border: 1px solid #999;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .contact-form textarea {
-  height: 120px;
+  height: 100px;
   resize: none;
 }
 
 .contact-form button {
-  margin-top: 30px;
+  margin-top: 20px;
   background: none;
   border: none;
   font-size: 18px;
@@ -153,6 +169,7 @@ header {
   justify-content: center;
   gap: 8px;
   align-self: center;
+  font-family: inherit;
 }
 
 .contact-form i.fa-paper-plane {
@@ -162,9 +179,29 @@ header {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 12px;
   color: #666;
   background-color: #fff;
   border-top: 1px solid #ccc;
+  margin-top: 40px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 30px 0;
+  }
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .section-title, .works h2, .works .subtitle, .works .description {
+    margin-left: 20px;
+  }
+  .works {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
