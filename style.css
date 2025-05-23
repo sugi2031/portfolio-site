@@ -1,174 +1,158 @@
+/* 全体設定 */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* ===== HEADER ===== */
+/* ヘッダー */
 header {
-  background-color: #fff;
-  padding: 20px 40px;
+  padding: 20px;
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .sns a {
   margin-left: 10px;
-  color: #000;
-  text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
-/* ===== MAIN VISUAL ===== */
-.mainvisual {
+/* メインビジュアル */
+.main-visual {
   position: relative;
+  text-align: left;
+  color: white;
 }
 
-.mainvisual img {
+.main-visual img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.maintext {
+.main-text {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 10%;
-  color: white;
-  font-size: 24px;
+  font-size: 1.8rem;
   line-height: 1.6;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  font-weight: 300;
 }
 
-/* ===== WORKS SECTION ===== */
+/* WORKS セクション */
 .works {
-  padding: 60px 40px;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 .works h2 {
-  font-size: 20px;
+  font-size: 0.8rem;
+  border-left: 2px solid #333;
+  padding-left: 8px;
   margin-bottom: 10px;
 }
 
-.works .subtitle {
-  font-size: 16px;
-  color: #333;
+.works h3 {
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.works .description {
-  font-size: 14px;
-  color: #555;
+.works p {
+  font-size: 0.85rem;
+  line-height: 1.6;
   margin-bottom: 30px;
-  line-height: 1.8;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  justify-items: center;
 }
 
-.gallery-item img {
+.gallery img {
   width: 100%;
-  height: 480px;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
-/* ===== CONTACT SECTION ===== */
-.section-title {
-  font-size: 20px;
-  margin: 80px 0 20px 40px;
+/* CONTACT セクション */
+.contact {
+  background: #e4e4e4;
+  padding: 60px 0;
 }
 
-#contact {
-  background-color: #ddd;
-  padding: 40px 0;
+.contact h2 {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  font-size: 0.8rem;
+  border-left: 2px solid #333;
+  padding-left: 8px;
 }
 
-.contact-container {
-  width: 90%;
-  max-width: 1200px;
+.contact-inner {
+  display: flex;
+  max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 40px;
+  gap: 20px;
+  padding: 0 20px;
 }
 
-.contact-img {
-  flex: 1 1 50%;
-}
-
-.contact-img img {
-  width: 100%;
-  height: 100%;
+.contact-inner img {
+  width: 50%;
   object-fit: cover;
 }
 
-.contact-form {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-form form {
+.contact-inner form {
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
 
-.contact-form label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-
-.contact-form input,
-.contact-form textarea {
+.contact-inner input,
+.contact-inner textarea {
+  margin-bottom: 10px;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #999;
-  width: 100%;
-  box-sizing: border-box;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.contact-form textarea {
-  height: 120px;
-  resize: none;
+.contact-inner textarea {
+  height: 100px;
+  resize: vertical;
 }
 
-.contact-form button {
-  margin-top: 30px;
+.contact-inner button {
+  align-self: flex-start;
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 0.9rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  align-self: center;
 }
 
-.contact-form i.fa-paper-plane {
-  transform: rotate(0deg);
-  font-size: 20px;
+.contact-inner button i {
+  margin-right: 5px;
+  transform: rotate(0deg); /* 水平の紙飛行機 */
 }
 
-/* ===== FOOTER ===== */
+/* フッター */
 footer {
   text-align: center;
   padding: 20px;
-  font-size: 12px;
-  color: #666;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  font-size: 0.7rem;
+  color: #888;
 }
