@@ -49,7 +49,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ---- WORKSギャラリーを元の正方形2x2で表示 ---- */
+/* WORKSギャラリー正常化（小さい正方形2x2で760px中央寄せ） */
 .works-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -75,7 +75,7 @@ body {
   display: block;
 }
 
-/* CONTACT見出し・CONTACT本体以降は変えていません */
+/* CONTACT見出し */
 .contact-title-outside {
   width: 960px;
   margin: 60px auto 0 auto;
@@ -85,30 +85,28 @@ body {
   padding-left: 100px;
   margin-bottom: 14px;
 }
+
+/* CONTACT本体 完全ピクセル合わせ */
 .contact-outer {
   width: 960px;
   margin: 0 auto 48px auto;
   background: transparent;
 }
 .contact-inner {
+  width: 960px;
+  height: 600px;
   display: flex;
   background: #e8e8e8;
-  border-radius: 0;
-  width: 960px;
-  height: 350px;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 .contact-img {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 600px;
+  background: #ccc;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ccc;
-  margin: 0;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 .contact-img img {
   width: 100%;
@@ -117,59 +115,72 @@ body {
   display: block;
 }
 .contact-form-area {
-  flex: 1;
-  min-width: 0;
-  padding: 42px 36px 42px 36px;
+  width: 560px;
+  height: 600px;
   background: #e8e8e8;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  margin-left: 20px;
 }
 .contact-form {
+  width: 420px;
+  margin-left: 40px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .contact-form label {
-  font-size: 11px;
-  margin: 8px 0 3px 0;
+  font-size: 12px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
 }
+.contact-form label:first-child { margin-top: 0; }
 .contact-form input,
 .contact-form textarea {
-  margin-bottom: 12px;
-  padding: 7px 9px;
-  font-size: 13px;
+  width: 420px;
+  box-sizing: border-box;
+  font-size: 12px;
   border: 1px solid #c8c8c8;
-  border-radius: 1px;
-  font-family: inherit;
-  resize: none;
   background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .contact-form textarea {
-  min-height: 90px;
+  min-height: 150px;
+  max-height: 150px;
+  resize: none;
 }
 .send-row {
   display: flex;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 40px;
+  height: 40px;
 }
 .contact-form button {
-  padding: 7px 24px;
-  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
   background: none;
   color: #222;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
 }
 .send-label {
   font-size: 14px;
   margin-left: 14px;
+  letter-spacing: 0.06em;
+  color: #222;
 }
 
+/* フッター */
 footer {
   width: 100%;
   text-align: center;
