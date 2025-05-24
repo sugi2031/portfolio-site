@@ -3,18 +3,28 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans JP', 'Arial', sans-serif;
-  color: #333333;
+  color: #333;
 }
+
 .container {
   width: 960px;
   margin: 0 auto;
   background: #fff;
 }
+
+/* セクション間に明示的に120px余白を作るクラス */
+.section-spacer-120 {
+  width: 100%;
+  height: 120px;
+}
+
 .header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px 0 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 14px;
 }
 .logo {
@@ -80,13 +90,22 @@ html, body {
   width: 960px;
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 0;    /* ここで0に（spacerで120px確保） */
+  margin-bottom: 0; /* 下余白はsection-spacer-120で管理 */
 }
-
-/* --- contact前の120px空白 --- */
-.contact-title-spacer {
+.works-img {
+  width: 460px;
+  height: 500px;
+  background: #eee;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.works-img img {
   width: 100%;
-  height: 120px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* CONTACT見出し */
@@ -98,10 +117,6 @@ html, body {
   letter-spacing: 0.08em;
   padding-left: 100px;
   margin-bottom: 14px;
-  height: 14px;       /* CONTACTの高さ14px */
-  line-height: 14px;
-  display: flex;
-  align-items: center;
 }
 
 /* CONTACT本体 */
@@ -140,7 +155,7 @@ html, body {
 }
 .contact-form {
   width: 420px;
-  margin-left: 40px;
+  margin-left: 40px; /* 設計図指示 */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -198,12 +213,7 @@ html, body {
   color: #222;
 }
 
-/* --- contact下の120px空白 --- */
-.contact-footer-spacer {
-  width: 100%;
-  height: 120px;
-}
-
+/* フッター */
 footer {
   width: 960px;
   margin: 0 auto;
