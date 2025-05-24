@@ -1,160 +1,83 @@
-/* 共通設定 */
-body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #333;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>PORTFOLIO DESIGN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <h1>PORTFOLIO DESIGN</h1>
+      <div class="sns">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </header>
 
-img {
-  max-width: 100%;
-  display: block;
-}
+  <!-- メインビジュアル -->
+  <div class="mainvisual">
+    <img src="img/main.png" alt="Main Visual">
+    <div class="maintext">
+      Hi.<br>
+      I'm photographer & web designer.<br>
+      Providing a good experience.
+    </div>
+  </div>
 
-/* ヘッダー */
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <!-- WORKSセクション -->
+  <section class="works">
+    <h2 class="works-heading">WORKS</h2>
+    <div class="works-text">
+      <p class="subtitle">The world is always a decisive moment</p>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+        At vero eos et accusam et justo duo dolores et ea rebum.
+      </p>
+    </div>
+    <div class="photo-grid">
+      <img src="img/photo1.png" alt="photo1">
+      <img src="img/photo2.png" alt="photo2">
+      <img src="img/photo3.png" alt="photo3">
+      <img src="img/photo4.png" alt="photo4">
+    </div>
+  </section>
 
-.sns a {
-  margin-left: 20px;
-  color: #333;
-  font-size: 24px;
-  text-decoration: none;
-}
+  <!-- CONTACTセクション -->
+  <section class="contact">
+    <h2 class="contact-heading">CONTACT</h2>
+    <div class="contact-container">
+      <div class="contact-image">
+        <img src="img/contact.png" alt="contact visual">
+      </div>
+      <div class="contact-form">
+        <form>
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name">
 
-/* メインビジュアル */
-.mainvisual {
-  position: relative;
-  height: 420px;
-  overflow: hidden;
-}
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="email" id="email" name="email">
 
-.mainvisual img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-}
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="5"></textarea>
 
-.maintext {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  color: white;
-  font-size: 24px;
-  line-height: 1.6;
-  font-weight: bold;
-}
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-/* WORKS */
-.works {
-  padding: 120px 20px 0;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.works-heading {
-  font-size: 14px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.works-text {
-  max-width: 600px;
-  margin-bottom: 40px;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: 460px 460px;
-  gap: 40px;
-  max-width: 960px;
-  margin: 0 auto 120px;
-  justify-content: center;
-}
-
-/* CONTACT */
-.contact {
-  padding: 120px 20px;
-  background-color: #fff;
-}
-
-.contact-heading {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.contact-container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  gap: 0;
-}
-
-.contact-image {
-  flex: 0 0 400px;
-}
-
-.contact-form {
-  flex: 0 0 560px;
-  background-color: #dddddd;
-  padding: 40px;
-  box-sizing: border-box;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 40px;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  background-color: #dddddd;
-  color: #333;
-  box-sizing: border-box;
-}
-
-.contact-form textarea {
-  height: 150px;
-}
-
-.contact-form button {
-  padding: 10px 40px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  display: block;
-  margin-top: 40px;
-}
-
-/* フッター */
-footer {
-  text-align: center;
-  font-size: 10px;
-  color: #999;
-  padding: 40px 0 20px;
-}
+  <!-- フッター -->
+  <footer>
+    <p>© 2021 PORTFOLIO DESIGN – ALL RIGHTS RESERVED</p>
+  </footer>
+</body>
+</html>

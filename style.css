@@ -9,7 +9,6 @@ body {
 }
 
 img {
-  max-width: 100%;
   display: block;
 }
 
@@ -57,7 +56,7 @@ img {
 .works {
   padding: 120px 20px 0;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0 auto 120px;
 }
 
 .works-heading {
@@ -84,8 +83,14 @@ img {
   grid-template-columns: 460px 460px;
   gap: 40px;
   max-width: 960px;
-  margin: 0 auto 120px;
+  margin: 0 auto;
   justify-content: center;
+}
+
+.photo-grid img {
+  width: 460px;
+  height: 500px;
+  object-fit: cover;
 }
 
 /* CONTACT */
@@ -104,11 +109,17 @@ img {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
-  gap: 0;
+  align-items: flex-start;
 }
 
 .contact-image {
   flex: 0 0 400px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .contact-form {
