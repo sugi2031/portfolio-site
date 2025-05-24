@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  font-family: 'Noto Sans JP', 'Arial', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   color: #222;
 }
 
@@ -11,50 +11,46 @@ body {
   margin: 0 auto;
 }
 
-/* Header */
-.header {
+header {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
 }
 
 .logo {
   font-size: 20px;
-  letter-spacing: 0.05em;
 }
 
-.sns a {
-  margin-left: 20px;
+.sns {
+  display: flex;
+  gap: 20px;
   font-size: 20px;
-  color: #222;
 }
 
-/* Main Visual */
 .mainvisual {
-  margin-top: 40px;
-  position: relative;
-}
-
-.mainvisual img {
-  width: 100%;
+  width: 960px;
   height: 420px;
-  object-fit: cover;
+  margin: 0 auto;
+  position: relative;
+  background: url('img/main.png') no-repeat center center / cover;
 }
 
-.main-text {
+.mainvisual-text {
   position: absolute;
-  bottom: 40px;
+  top: 40px;
   left: 40px;
-  color: #fff;
+  color: white;
   font-size: 38px;
-  line-height: 1.5;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  line-height: 1.6;
 }
 
-/* Works Section */
 .works {
-  margin-top: 120px;
+  width: 600px;
+  margin: 120px auto 0 auto;
 }
 
 .works-title {
@@ -62,47 +58,48 @@ body {
   margin-bottom: 20px;
 }
 
-.works-lead h2 {
+.works h2 {
   font-size: 28px;
+  margin: 0 0 10px 0;
+}
+
+.works p {
+  font-size: 14px;
+  line-height: 1.8;
   margin: 0;
 }
 
-.works-lead p {
-  font-size: 14px;
-  margin-top: 10px;
-  line-height: 1.8;
-  color: #444;
-}
-
-.works-gallery {
+.gallery {
+  width: 960px;
   display: grid;
   grid-template-columns: 460px 460px;
   grid-template-rows: 500px 500px;
   gap: 40px;
-  margin-top: 40px;
+  margin: 120px auto 0 auto;
 }
 
-.works-img img {
+.gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Section Spacing */
-.section-space {
-  height: 120px;
-}
-
-/* Contact */
 .contact-title {
+  width: 960px;
+  margin: 120px auto 14px auto;
   font-size: 14px;
-  margin-bottom: 20px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  color: #222;
 }
 
-.contact {
-  display: flex;
+.contact-box {
+  width: 960px;
   height: 600px;
-  background-color: #e8e8e8;
+  margin: 0 auto;
+  display: flex;
+  background: #e8e8e8;
 }
 
 .contact-left {
@@ -115,6 +112,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .contact-right {
@@ -123,50 +121,50 @@ body {
   box-sizing: border-box;
 }
 
-.contact-right form {
+form {
   width: 420px;
   margin-left: 40px;
 }
 
-.contact-right label {
-  font-size: 12px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+label {
   display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
-.contact-right label:first-of-type {
+label:first-of-type {
   margin-top: 0;
 }
 
-.contact-right input,
-.contact-right textarea {
+input,
+textarea {
   width: 420px;
   padding: 10px;
+  margin-bottom: 10px;
   font-size: 12px;
   border: 1px solid #ccc;
-  background: #fff;
-  margin-bottom: 10px;
+  background: white;
   box-sizing: border-box;
 }
 
-.contact-right textarea {
+textarea {
   height: 150px;
   resize: none;
 }
 
 .send-row {
-  display: flex;
-  align-items: center;
   margin-top: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .send-row button {
   width: 40px;
   height: 40px;
-  background: none;
   border: none;
+  background: none;
   font-size: 18px;
   color: #222;
   cursor: pointer;
@@ -175,13 +173,15 @@ body {
 .send-row span {
   font-size: 14px;
   margin-left: 14px;
+  color: #222;
 }
 
-/* Footer */
 footer {
+  width: 960px;
+  margin: 120px auto 0 auto;
   text-align: center;
   font-size: 10px;
   color: #aaa;
   letter-spacing: 0.05em;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
