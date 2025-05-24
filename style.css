@@ -6,13 +6,10 @@ body {
   color: #222;
 }
 .container {
-  width: 1000px;
+  width: 960px;
   margin: 0 auto;
   background: #fff;
 }
-
-/* ヘッダー・mainvisualは省略 */
-
 .works-title {
   font-size: 12px;
   color: #222;
@@ -33,11 +30,12 @@ body {
   line-height: 1.6;
 }
 
+/* ギャラリー 2x2, gap=40px, 横幅960, 画像は460x560px固定 */
 .works-gallery {
   display: grid;
   grid-template-columns: 460px 460px;
   grid-template-rows: 560px 560px;
-  gap: 40px 40px;
+  gap: 40px;
   width: 960px;
   margin: 0 auto;
 }
@@ -61,7 +59,7 @@ body {
   height: 120px;
 }
 
-/* CONTACT見出し */
+/* CONTACTタイトル */
 .contact-title-outside {
   width: 960px;
   margin: 0 auto 14px auto;
@@ -69,12 +67,13 @@ body {
   color: #222;
   letter-spacing: 0.1em;
   text-align: left;
+  font-family: 'Noto Sans JP', 'Arial', sans-serif;
 }
 
-/* CONTACT本体 960x600px（photo5:400x600, フォーム:560x600） */
+/* CONTACT 960×600px (photo5 400×600 + フォーム560×600) */
 .contact-outer {
   width: 960px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   background: transparent;
 }
 .contact-inner {
@@ -102,10 +101,10 @@ body {
 .contact-form-area {
   width: 560px;
   height: 600px;
-  background: #e8e8e8;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  background: #e8e8e8;
 }
 .contact-form {
   width: 420px;
@@ -165,7 +164,7 @@ body {
   color: #222;
 }
 
-/* 下の余白（footer上120px） */
+/* footerも120px空白後 */
 footer {
   width: 100%;
   text-align: center;
