@@ -88,14 +88,18 @@ body {
   grid-gap: 32px;
   margin-top: 8px;
 }
-
-.works-img img {
+ .works-img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+  }  
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: 260px;      /* ←高さを幅と同じpx数にして正方形 */
+  object-fit: cover;  /* 中央トリミングで正方形を維持 */
   border-radius: 0;
   display: block;
+  aspect-ratio: 1 / 1; /* 追加：比率強制、対応ブラウザでより安定 */
 }
+
 
 .contact {
   margin-top: 60px;
