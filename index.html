@@ -8,33 +8,32 @@
 </head>
 <body>
   <div class="container">
-    <!-- ...ヘッダーとWORKS省略... -->
-
-    <!-- WORKSセクションここまで -->
-
-    <!-- CONTACTセクション（見本通り配置） -->
-    <section class="contact">
-      <div class="contact-title">| CONTACT</div>
-      <div class="contact-inner">
-        <div class="contact-img">
-          <img src="img/photo5.jpg" alt="contact">
-        </div>
-        <div class="contact-form-area">
-          <form class="contact-form">
-            <label for="name">NAME</label>
-            <input type="text" id="name" name="name">
-            <label for="email">EMAIL ADDRESS</label>
-            <input type="email" id="email" name="email">
-            <label for="message">MESSAGE</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit"><i class="fas fa-location-arrow"></i> SEND</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- CONTACTここまで -->
-
+    <!-- ヘッダー・メインビジュアル・WORKSグリッドをここに配置（省略） -->
   </div>
+
+  <!-- ▼container外、ページ左端で「| CONTACT」表示 -->
+  <div class="contact-title-global">| CONTACT</div>
+
+  <!-- ▼グレー背景contactはcontainer幅で中央寄せ -->
+  <section class="contact">
+    <div class="contact-flex">
+      <div class="contact-img">
+        <img src="img/photo5.jpg" alt="contact">
+      </div>
+      <div class="contact-form-area">
+        <form class="contact-form">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name">
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="email" id="email" name="email">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit"><i class="fas fa-location-arrow"></i> SEND</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="footer-text">&copy; 2025 PORTFOLIO DESIGN - ALL RIGHTS RESERVED</div>
   </footer>

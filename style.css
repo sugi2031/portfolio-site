@@ -7,177 +7,82 @@ body {
 }
 
 .container {
-  width: 900px;
+  width: 940px;
   margin: 0 auto;
   background: #fff;
-  padding: 0;
 }
 
-.header-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 24px;
-}
-
-.logo {
-  font-size: 15px;
-  letter-spacing: 0.1em;
-}
-
-.sns a {
+/* ▼「| CONTACT」見出しをcontainer外、左端ベタで */
+.contact-title-global {
+  font-size: 12px;
   color: #222;
-  margin-left: 16px;
-  font-size: 18px;
-  text-decoration: none;
+  font-family: 'Noto Sans JP', 'Arial', sans-serif;
+  margin-top: 60px;        /* WORKSグリッドと間隔 */
+  margin-bottom: 16px;     /* グレー背景との間隔 */
+  margin-left: 0;
+  letter-spacing: 0.09em;
+  width: 100vw;
+  padding-left: 0;
+  box-sizing: border-box;
 }
 
-.mainvisual {
+/* ▼contactグレー背景はcontainerと同じ幅・中央寄せ */
+.contact {
+  width: 940px;
+  background: #e8e8e8;
+  margin: 0 auto 0 auto;
+  padding: 0;
   position: relative;
-  margin-top: 18px;
-}
-
-.mainvisual img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
+  box-sizing: border-box;
+  min-height: 420px;
   border-radius: 0;
 }
-
-.main-text {
-  position: absolute;
-  left: 32px;
-  bottom: 32px;
-  color: #fff;
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.22);
-  letter-spacing: 0.02em;
-}
-
-.works {
-  margin-top: 56px;
-}
-
-.works-title {
-  font-size: 12px;
-  color: #222;
-  letter-spacing: 0.1em;
-  margin-bottom: 16px;
-  font-family: 'Noto Sans JP', 'Arial', sans-serif;
-}
-
-.works-lead h2 {
-  font-size: 19px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.works-lead p {
-  font-size: 12px;
-  color: #444;
-  margin-top: 0;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-.works-gallery {
-  display: grid;
-  grid-template-columns: 434px 434px;
-  grid-template-rows: 434px 434px;
-  gap: 32px;
-  width: 900px;
-  margin: 0;
-  padding: 0;
-}
-
-.works-img {
-  width: 434px;
-  height: 434px;
-  background: #eee;
-  overflow: hidden;
+.contact-flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.works-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ====== CONTACT修正版 ====== */
-.contact {
-  margin-top: 60px;
-  margin-bottom: 48px;
-  width: 900px;
-  background: #e8e8e8; /* グレー背景ここに */
-  padding: 0;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* CONTACTタイトルはグレー背景内の左上に */
-.contact-title {
-  font-size: 12px;
-  color: #222;
-  margin-bottom: 18px;
-  font-family: 'Noto Sans JP', 'Arial', sans-serif;
-  padding: 36px 0 0 40px; /* 上・左に余白を持たせて左上へ */
-}
-
-/* 中身は中央寄せ＆画像＋フォーム横並び */
-.contact-inner {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  max-width: 700px;
-  margin: 0 auto 0 auto;
-  padding: 0 0 36px 0;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding-bottom: 48px;
   box-sizing: border-box;
-  gap: 40px;
+  gap: 0;
 }
-
-/* 画像側 */
 .contact-img {
-  width: 280px;
-  height: 280px;
+  width: 350px;
+  height: 350px;
   background: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-
 .contact-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-/* フォーム側 */
 .contact-form-area {
   flex: 1;
-  min-width: 260px;
+  min-width: 340px;
+  max-width: 480px;
+  padding: 45px 35px 25px 48px;
   background: transparent;
-  padding: 0;
+  display: flex;
+  align-items: center;
 }
-
 .contact-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .contact-form label {
   font-size: 11px;
   margin: 8px 0 3px 0;
+  letter-spacing: 0.03em;
 }
-
 .contact-form input,
 .contact-form textarea {
   margin-bottom: 12px;
@@ -189,13 +94,12 @@ body {
   resize: none;
   background: #fff;
 }
-
 .contact-form textarea {
   min-height: 70px;
+  resize: vertical;
 }
-
 .contact-form button {
-  margin-top: 10px;
+  margin-top: 18px;
   padding: 7px 24px;
   font-size: 14px;
   background: none;
@@ -205,16 +109,15 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
+  letter-spacing: 0.04em;
 }
 
-/* ====== /CONTACT修正版 ====== */
-
+/* footer */
 footer {
   width: 100%;
   text-align: center;
   margin-top: 16px;
 }
-
 .footer-text {
   font-size: 9px;
   color: #aaa;
