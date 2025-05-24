@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
   box-sizing: border-box;
@@ -13,16 +13,16 @@ img {
   max-width: 100%;
 }
 
+/* コンテナ共通 */
 .container {
-  max-width: 960px;
+  width: 960px;
   margin: 0 auto;
 }
 
 /* ヘッダー */
 .header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 20px 0;
+  width: 960px;
+  margin: 40px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,9 +33,9 @@ img {
 }
 
 .sns a {
+  font-size: 24px;
   margin-left: 20px;
   color: #333;
-  font-size: 24px;
   text-decoration: none;
 }
 
@@ -58,20 +58,26 @@ img {
   left: 40px;
   color: white;
   font-size: 24px;
-  line-height: 1.6;
   font-weight: bold;
+  line-height: 1.6;
 }
 
-/* WORKSセクション */
+/* WORKS */
 .works {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.works-title {
+.works-heading {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .works-text {
@@ -81,31 +87,23 @@ img {
   margin-bottom: 40px;
 }
 
-.subtitle {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .photo-grid {
+  width: 960px;
+  margin: 0 auto 120px;
   display: grid;
   grid-template-columns: 460px 460px;
   gap: 40px;
-  width: 960px;
-  margin: 0 auto 120px;
 }
 
 .photo-grid img {
   width: 460px;
   height: 500px;
   object-fit: cover;
-  display: block;
 }
 
 /* CONTACT */
 .contact {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 
 .contact-title {
@@ -116,11 +114,13 @@ img {
 
 .contact-inner {
   display: flex;
+  width: 960px;
   height: 600px;
+  margin: 0 auto;
 }
 
 .contact-image {
-  flex: 0 0 400px;
+  width: 400px;
 }
 
 .contact-image img {
@@ -130,15 +130,15 @@ img {
 }
 
 .contact-form {
-  flex: 0 0 560px;
+  width: 560px;
   background-color: #dddddd;
   padding: 40px;
   box-sizing: border-box;
 }
 
 .contact-form label {
-  font-size: 12px;
   display: block;
+  font-size: 12px;
   margin-bottom: 10px;
 }
 
@@ -146,11 +146,11 @@ img {
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 40px;
-  background-color: #dddddd;
-  border: 1px solid #ccc;
   font-size: 12px;
+  background-color: #dddddd;
   color: #333;
+  border: 1px solid #ccc;
+  margin-bottom: 40px;
   box-sizing: border-box;
 }
 
@@ -162,11 +162,11 @@ img {
   padding: 10px 40px;
   background-color: #333;
   color: #fff;
-  border: none;
   font-size: 14px;
+  border: none;
+  cursor: pointer;
   display: block;
   margin-top: 40px;
-  cursor: pointer;
 }
 
 /* フッター */
