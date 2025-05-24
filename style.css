@@ -87,7 +87,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  width: 760px;
+  width: 760px;             /* ギャラリー幅を760pxで統一 */
   margin: 0 auto;
 }
 .works-img {
@@ -106,29 +106,35 @@ body {
   display: block;
 }
 
+/* ---- CONTACTブロック全体をWORKSギャラリー左に合わせる ---- */
+.contact-block-wrapper {
+  width: 760px;                   /* .works-galleryと同じ幅 */
+  margin: 60px auto 0 auto;       /* 上余白は60px、中央寄せ（両端揃う）*/
+}
+
 /* ---- CONTACT 見出し ---- */
 .contact-title-outside {
-  width: 940px;
-  margin: 60px auto 0 auto;
+  width: 100%;
   font-size: 12px;
   color: #222;
   letter-spacing: 0.1em;
   font-family: 'Noto Sans JP', 'Arial', sans-serif;
   text-align: left;
+  margin-bottom: 10px;
 }
 
 /* ---- CONTACT 本体 ---- */
 .contact-outer {
-  width: 940px;
-  margin: 0 auto 48px auto;
+  width: 100%;                   /* ラッパー幅と同じでOK */
   background: transparent;
 }
+
 .contact-inner {
   display: flex;
   background: #e8e8e8;
   border-radius: 0;
-  width: 940px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   box-sizing: border-box;
 }
 
