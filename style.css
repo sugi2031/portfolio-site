@@ -82,25 +82,26 @@ body {
   line-height: 1.6;
 }
 
+/* WORKSギャラリー 見本通り厳密再現 */
 .works-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 350px);
+  grid-template-rows: repeat(2, 350px);
   gap: 32px;
   margin-top: 8px;
-  width: 740px;           /* ギャラリー全体の横幅を固定 */
+  width: 740px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .works-img {
-  width: 350px;           /* 画像枠を正方形に */
+  width: 350px;
   height: 350px;
-  aspect-ratio: 1 / 1;
+  background: #eee;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eee;
 }
 
 .works-img img {
@@ -110,6 +111,7 @@ body {
   display: block;
 }
 
+/* --- CONTACT セクション --- */
 .contact {
   margin-top: 60px;
   margin-bottom: 48px;
@@ -118,13 +120,13 @@ body {
 .contact-inner {
   display: flex;
   background: #e8e8e8;
-  padding: 40px 0; /* 上下に余白を持たせる */
+  padding: 40px 0;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* ← ここを新しく修正！ */
 .contact-img {
   width: 300px;
   height: 300px;
@@ -135,6 +137,7 @@ body {
   margin-right: 40px;
   margin-left: 20px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .contact-img img {
@@ -146,7 +149,8 @@ body {
 
 .contact-form-area {
   flex: 1;
-  padding: 0 40px 0 0; /* 右だけ余白 */
+  min-width: 340px;
+  padding: 0 40px 0 0;
   background: #e8e8e8;
 }
 
