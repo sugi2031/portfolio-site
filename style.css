@@ -81,10 +81,11 @@ img {
 
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(2, 460px);
+  grid-template-columns: 460px 460px;
   gap: 40px;
+  max-width: 960px;
+  margin: 0 auto 120px;
   justify-content: center;
-  margin-bottom: 120px;
 }
 
 /* CONTACT */
