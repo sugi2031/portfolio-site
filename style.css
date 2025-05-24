@@ -6,11 +6,11 @@ body {
   color: #222;
 }
 
-/* containerを広げてmain画像とWORKSギャラリー端揃え */
 .container {
-  width: 1100px;  /* 見本PNGに合わせて拡大、左右に合わせる */
+  width: 1100px;         /* main画像と同じ幅 */
   margin: 0 auto;
   background: #fff;
+  padding: 0;
 }
 
 .header-bar {
@@ -57,7 +57,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ---- WORKS ---- */
+/* WORKS */
 .works {
   margin-top: 56px;
 }
@@ -84,22 +84,23 @@ body {
   line-height: 1.6;
 }
 
-/* ギャラリー画像をcontainerの左右端揃えで拡大 */
+/* ---- 完全端揃えのWORKSギャラリー ---- */
 .works-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  width: 100%;
-  margin: 0 auto;
+  gap: 0;                /* 隙間ゼロ */
+  width: 100%;           /* containerの端ぴったり */
+  margin: 0;
+  padding: 0;
 }
 .works-img {
   width: 100%;
   aspect-ratio: 1/1;
-  background: #eee;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #eee;
 }
 .works-img img {
   width: 100%;
@@ -108,7 +109,7 @@ body {
   display: block;
 }
 
-/* ---- CONTACT 見出し ---- */
+/* CONTACTなど以降は今まで通りでOK */
 .contact-title-outside {
   width: 1100px;
   margin: 60px auto 0 auto;
@@ -118,8 +119,6 @@ body {
   font-family: 'Noto Sans JP', 'Arial', sans-serif;
   text-align: left;
 }
-
-/* ---- CONTACT 本体 ---- */
 .contact-outer {
   width: 1100px;
   margin: 0 auto 48px auto;
@@ -133,7 +132,6 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 .contact-img {
   width: 350px;
   height: 350px;
@@ -151,7 +149,6 @@ body {
   object-fit: cover;
   display: block;
 }
-
 .contact-form-area {
   flex: 1;
   min-width: 0;
@@ -161,18 +158,15 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
 .contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .contact-form label {
   font-size: 11px;
   margin: 8px 0 3px 0;
 }
-
 .contact-form input,
 .contact-form textarea {
   margin-bottom: 12px;
@@ -184,11 +178,9 @@ body {
   resize: none;
   background: #fff;
 }
-
 .contact-form textarea {
   min-height: 90px;
 }
-
 .contact-form button {
   margin-top: 18px;
   padding: 7px 24px;
@@ -201,13 +193,11 @@ body {
   align-items: center;
   gap: 7px;
 }
-
 footer {
   width: 100%;
   text-align: center;
   margin-top: 16px;
 }
-
 .footer-text {
   font-size: 9px;
   color: #aaa;
