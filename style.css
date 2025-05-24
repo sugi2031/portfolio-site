@@ -110,7 +110,6 @@ body {
   display: block;
 }
 
-
 .contact {
   margin-top: 60px;
   margin-bottom: 48px;
@@ -119,19 +118,35 @@ body {
 .contact-inner {
   display: flex;
   background: #e8e8e8;
-  padding: 0;
+  padding: 40px 0; /* 上下に余白を持たせる */
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* ← ここを新しく修正！ */
+.contact-img {
+  width: 300px;
+  height: 300px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+  margin-left: 20px;
+  box-sizing: border-box;
 }
 
 .contact-img img {
-  width: 300px;
-  height: 270px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
 .contact-form-area {
   flex: 1;
-  padding: 30px 38px;
+  padding: 0 40px 0 0; /* 右だけ余白 */
   background: #e8e8e8;
 }
 
