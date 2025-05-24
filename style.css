@@ -10,7 +10,7 @@ body {
   width: 900px;
   margin: 0 auto;
   background: #fff;
-  padding: 0;        /* ← 余白完全にゼロ */
+  padding: 0;
 }
 
 .header-bar {
@@ -110,31 +110,46 @@ body {
   display: block;
 }
 
+/* ====== CONTACT修正版 ====== */
 .contact {
   margin-top: 60px;
   margin-bottom: 48px;
-  padding: 0; /* ←追加 */
+  width: 900px;
+  background: #e8e8e8; /* グレー背景ここに */
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
 }
 
-/* ←←重要: container幅ピッタリ・中央寄せ解除・余白0に */
+/* CONTACTタイトルはグレー背景内の左上に */
+.contact-title {
+  font-size: 12px;
+  color: #222;
+  margin-bottom: 18px;
+  font-family: 'Noto Sans JP', 'Arial', sans-serif;
+  padding: 36px 0 0 40px; /* 上・左に余白を持たせて左上へ */
+}
+
+/* 中身は中央寄せ＆画像＋フォーム横並び */
 .contact-inner {
   display: flex;
-  background: #e8e8e8;
-  width: 900px;         /* container幅と同じに */
-  margin: 0;            /* 中央寄せ解除 */
-  padding: 0;           /* 余白なし */
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 700px;
+  margin: 0 auto 0 auto;
+  padding: 0 0 36px 0;
   box-sizing: border-box;
+  gap: 40px;
 }
 
+/* 画像側 */
 .contact-img {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   background: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;           /* ←余白全て削除 */
-  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -145,18 +160,12 @@ body {
   display: block;
 }
 
+/* フォーム側 */
 .contact-form-area {
   flex: 1;
-  min-width: 340px;
-  padding: 40px;
-  background: #e8e8e8;
-}
-
-.contact-title {
-  font-size: 12px;
-  color: #222;
-  margin-bottom: 18px;
-  font-family: 'Noto Sans JP', 'Arial', sans-serif;
+  min-width: 260px;
+  background: transparent;
+  padding: 0;
 }
 
 .contact-form {
@@ -197,6 +206,8 @@ body {
   align-items: center;
   gap: 7px;
 }
+
+/* ====== /CONTACT修正版 ====== */
 
 footer {
   width: 100%;
