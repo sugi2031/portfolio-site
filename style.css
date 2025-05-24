@@ -10,6 +10,7 @@ body {
   width: 900px;
   margin: 0 auto;
   background: #fff;
+  padding: 0;        /* ← 余白完全にゼロ */
 }
 
 .header-bar {
@@ -88,8 +89,7 @@ body {
   grid-template-rows: 434px 434px;
   gap: 32px;
   width: 900px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -113,17 +113,18 @@ body {
 .contact {
   margin-top: 60px;
   margin-bottom: 48px;
+  padding: 0; /* ←追加 */
 }
 
-/* ↓↓↓ここを修正↓↓↓ */
+/* ←←重要: container幅ピッタリ・中央寄せ解除・余白0に */
 .contact-inner {
   display: flex;
   background: #e8e8e8;
-  width: 100%;            /* containerいっぱいに広げる */
+  width: 900px;         /* container幅と同じに */
+  margin: 0;            /* 中央寄せ解除 */
+  padding: 0;           /* 余白なし */
   box-sizing: border-box;
-  /* max-width, margin, paddingは無し */
 }
-/* ↑↑↑ここを修正↑↑↑ */
 
 .contact-img {
   width: 300px;
@@ -132,8 +133,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 40px;
-  margin-left: 20px;
+  margin: 0;           /* ←余白全て削除 */
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -148,7 +148,7 @@ body {
 .contact-form-area {
   flex: 1;
   min-width: 340px;
-  padding: 0 40px 0 0;
+  padding: 40px;
   background: #e8e8e8;
 }
 
