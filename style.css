@@ -84,24 +84,32 @@ body {
 
 .works-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-top: 8px;
+  width: 740px;           /* ギャラリー全体の横幅を固定 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .works-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;    /* 親を正方形に固定 */
+  width: 350px;           /* 画像枠を正方形に */
+  height: 350px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
 }
 
 .works-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* 正方形内で中央トリミング */
+  object-fit: cover;
   display: block;
 }
+
 
 .contact {
   margin-top: 60px;
