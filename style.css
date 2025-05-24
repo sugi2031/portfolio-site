@@ -82,21 +82,20 @@ body {
   line-height: 1.6;
 }
 
-/* WORKSギャラリー 見本通り厳密再現 */
 .works-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 350px);
-  grid-template-rows: repeat(2, 350px);
+  grid-template-columns: repeat(2, 434px);
+  grid-template-rows: repeat(2, 434px);
   gap: 32px;
   margin-top: 8px;
-  width: 740px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .works-img {
-  width: 350px;
-  height: 350px;
+  width: 434px;
+  height: 434px;
   background: #eee;
   overflow: hidden;
   display: flex;
@@ -111,7 +110,6 @@ body {
   display: block;
 }
 
-/* --- CONTACT セクション --- */
 .contact {
   margin-top: 60px;
   margin-bottom: 48px;
