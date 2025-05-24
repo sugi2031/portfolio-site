@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body>
+
   <!-- ヘッダー -->
   <header>
     <div class="header-inner">
-      <h1>PORTFOLIO DESIGN</h1>
+      <h1 class="logo">PORTFOLIO DESIGN</h1>
       <div class="sns">
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -21,56 +22,51 @@
 
   <!-- メインビジュアル -->
   <div class="mainvisual">
-    <img src="img/main.png" alt="Main Visual">
+    <img src="img/main.png" alt="main visual">
     <div class="maintext">
-      Hi.<br>
+      <p>Hi.<br>
       I'm photographer & web designer.<br>
-      Providing a good experience.
+      Providing a good experience.</p>
     </div>
   </div>
 
   <!-- WORKSセクション -->
   <section class="works">
-    <h2 class="works-heading">WORKS</h2>
-    <div class="works-text">
-      <p class="subtitle">The world is always a decisive moment</p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-        At vero eos et accusam et justo duo dolores et ea rebum.
-      </p>
-    </div>
-    <div class="photo-grid">
-      <img src="img/photo1.png" alt="photo1">
-      <img src="img/photo2.png" alt="photo2">
-      <img src="img/photo3.png" alt="photo3">
-      <img src="img/photo4.png" alt="photo4">
+    <div class="container">
+      <h2 class="works-title">WORKS</h2>
+      <div class="works-text">
+        <p class="subtitle">The world is always a decisive moment</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+      </div>
+      <div class="photo-grid">
+        <img src="img/photo1.png" alt="photo1">
+        <img src="img/photo2.png" alt="photo2">
+        <img src="img/photo3.png" alt="photo3">
+        <img src="img/photo4.png" alt="photo4">
+      </div>
     </div>
   </section>
 
   <!-- CONTACTセクション -->
   <section class="contact">
-    <h2 class="contact-heading">CONTACT</h2>
-    <div class="contact-container">
-      <div class="contact-image">
-        <img src="img/contact.png" alt="contact visual">
-      </div>
-      <div class="contact-form">
-        <form>
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name">
-
-          <label for="email">EMAIL ADDRESS</label>
-          <input type="email" id="email" name="email">
-
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message" rows="5"></textarea>
-
-          <button type="submit">SEND</button>
-        </form>
+    <div class="container">
+      <h2 class="contact-title">CONTACT</h2>
+      <div class="contact-inner">
+        <div class="contact-image">
+          <img src="img/contact.png" alt="contact visual">
+        </div>
+        <div class="contact-form">
+          <form>
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name">
+            <label for="email">EMAIL ADDRESS</label>
+            <input type="email" id="email" name="email">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">SEND</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -79,5 +75,6 @@
   <footer>
     <p>© 2021 PORTFOLIO DESIGN – ALL RIGHTS RESERVED</p>
   </footer>
+
 </body>
 </html>
