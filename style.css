@@ -85,21 +85,23 @@ body {
 .works-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 32px;
+  gap: 32px;
   margin-top: 8px;
 }
- .works-img {
-    aspect-ratio: 1 / 1;
-    width: 100%;
-  }  
+
+.works-img {
   width: 100%;
-  height: 260px;      /* ←高さを幅と同じpx数にして正方形 */
-  object-fit: cover;  /* 中央トリミングで正方形を維持 */
-  border-radius: 0;
-  display: block;
-  aspect-ratio: 1 / 1; /* 追加：比率強制、対応ブラウザでより安定 */
+  aspect-ratio: 1 / 1;    /* 親を正方形に固定 */
+  overflow: hidden;
+  display: flex;
 }
 
+.works-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* 正方形内で中央トリミング */
+  display: block;
+}
 
 .contact {
   margin-top: 60px;
