@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>PORTFOLIO DESIGN</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body>
   <div class="container">
 
-    <!-- MAIN VISUAL -->
+    <!-- メインビジュアル -->
     <section class="mainvisual">
-      <img src="img/main.png" alt="main visual">
+      <img src="img/main.png" alt="main visual" />
       <div class="main-text">
-        <p class="text-large">Hi.</p>
-        <p class="text-mid">I'm photographer & web designer.</p>
-        <p class="text-small">Providing a good experience.</p>
+        <p>Hi.<br>I'm photographer & web designer.<br>Providing a good experience.</p>
       </div>
     </section>
 
@@ -24,7 +22,7 @@
       <div class="works-title">| WORKS</div>
       <div class="works-lead">
         <h2>The world is always a decisive moment</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur sadipscing elit, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur sadipscing elit, sed diam...</p>
       </div>
       <div class="works-gallery">
         <div class="works-img"><img src="img/photo1.jpg" alt="photo1"></div>
@@ -34,41 +32,40 @@
       </div>
     </section>
 
-    <!-- SPACE 120px -->
+    <!-- スペース -->
     <div class="section-space"></div>
 
-    <!-- CONTACT -->
-    <div class="contact-title">| CONTACT</div>
-    <section class="contact">
-      <div class="contact-left">
-        <img src="img/photo5.jpg" alt="contact">
-      </div>
-      <div class="contact-right">
-        <form>
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name">
-          <label for="email">EMAIL ADDRESS</label>
-          <input type="email" id="email" name="email">
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message"></textarea>
-          <div class="send-row">
-            <button type="submit"><i class="fas fa-location-arrow"></i></button>
-            <span class="send-label">SEND</span>
-          </div>
-        </form>
+    <!-- CONTACT見出し -->
+    <div class="contact-title-outside">| CONTACT</div>
+
+    <!-- CONTACT本体 -->
+    <section class="contact-outer">
+      <div class="contact-inner">
+        <div class="contact-img">
+          <img src="img/photo5.jpg" alt="photo5">
+        </div>
+        <div class="contact-form-area">
+          <form class="contact-form">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name">
+            <label for="email">EMAIL ADDRESS</label>
+            <input type="email" id="email" name="email">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="send-row">
+              <button type="submit"><i class="fas fa-location-arrow"></i></button>
+              <span class="send-label">SEND</span>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
-    <!-- SPACE 120px -->
+    <!-- フッター -->
     <div class="section-space"></div>
-
-    <!-- FOOTER -->
     <footer>
-      <div class="footer-text">
-        &copy; 2021 PORTFOLIO DESIGN – ALL RIGHTS RESERVED
-      </div>
+      <div class="footer-text">© 2021 PORTFOLIO DESIGN – ALL RIGHTS RESERVED</div>
     </footer>
-
   </div>
 </body>
 </html>
