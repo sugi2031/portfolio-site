@@ -39,12 +39,14 @@
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
       </div>
-      <div class="photo-grid">
-        <img src="img/photo1.png" alt="photo1">
-        <img src="img/photo2.png" alt="photo2">
-        <img src="img/photo3.png" alt="photo3">
-        <img src="img/photo4.png" alt="photo4">
-      </div>
+    </div>
+
+    <!-- ギャラリー画像はcontainer外に配置 -->
+    <div class="photo-grid">
+      <img src="img/photo1.png" alt="photo1">
+      <img src="img/photo2.png" alt="photo2">
+      <img src="img/photo3.png" alt="photo3">
+      <img src="img/photo4.png" alt="photo4">
     </div>
   </section>
 
@@ -60,10 +62,13 @@
           <form>
             <label for="name">NAME</label>
             <input type="text" id="name" name="name">
+
             <label for="email">EMAIL ADDRESS</label>
             <input type="email" id="email" name="email">
+
             <label for="message">MESSAGE</label>
             <textarea id="message" name="message"></textarea>
+
             <button type="submit">SEND</button>
           </form>
         </div>
