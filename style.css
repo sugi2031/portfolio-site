@@ -89,31 +89,59 @@ body {
   max-width: 780px;
   margin: 0 0 30px 0;
 }
+/* ・・・前略・・・ */
 
+/* ギャラリーここから */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 42px 42px;
-  justify-items: center;
-  margin-top: 44px;
-  margin-bottom: 60px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 32px 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 0 auto;
+  max-width: 720px;
+  min-width: 320px;
 }
 
 .gallery-item {
-  width: 290px;
-  height: 290px;
-  overflow: hidden;
-  border-radius: 8px;
+  width: 320px;
+  height: 320px;
   background: #eee;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 0;
   display: block;
-  border-radius: 8px;
 }
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 340px;
+  }
+  .gallery-item {
+    width: 100%;
+    height: 220px;
+  }
+}
+/* ギャラリーここまで */
+
+/* ・・・後略・・・ */
+
+
 
 /* CONTACT */
 .section-title {
