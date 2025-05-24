@@ -7,10 +7,9 @@ body {
 }
 
 .container {
-  width: 1100px;         /* main画像と同じ幅 */
+  width: 940px;
   margin: 0 auto;
   background: #fff;
-  padding: 0;
 }
 
 .header-bar {
@@ -39,7 +38,7 @@ body {
 
 .mainvisual img {
   width: 100%;
-  height: 270px;
+  height: 260px;
   object-fit: cover;
   display: block;
   border-radius: 0;
@@ -57,7 +56,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* WORKS */
+/* ---- WORKS ---- */
 .works {
   margin-top: 56px;
 }
@@ -84,23 +83,21 @@ body {
   line-height: 1.6;
 }
 
-/* ---- 完全端揃えのWORKSギャラリー ---- */
 .works-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;                /* 隙間ゼロ */
-  width: 100%;           /* containerの端ぴったり */
-  margin: 0;
-  padding: 0;
+  gap: 32px;
+  width: 940px;
+  margin: 0 auto;
 }
 .works-img {
-  width: 100%;
-  aspect-ratio: 1/1;
+  width: 454px;
+  height: 454px;
+  background: #eee;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eee;
 }
 .works-img img {
   width: 100%;
@@ -109,28 +106,28 @@ body {
   display: block;
 }
 
-/* CONTACTなど以降は今まで通りでOK */
-.contact-title-outside {
-  width: 1100px;
-  margin: 60px auto 0 auto;
+/* ---- CONTACT ---- */
+.contact-outer {
+  width: 940px;
+  margin: 56px auto 48px auto;
+}
+.contact-inner {
+  display: flex;
+  flex-direction: row;
+  background: #e8e8e8;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.contact-title {
+  position: absolute;
+  top: 24px;
+  left: 24px;
   font-size: 12px;
   color: #222;
   letter-spacing: 0.1em;
   font-family: 'Noto Sans JP', 'Arial', sans-serif;
-  text-align: left;
-}
-.contact-outer {
-  width: 1100px;
-  margin: 0 auto 48px auto;
-  background: transparent;
-}
-.contact-inner {
-  display: flex;
-  background: #e8e8e8;
-  border-radius: 0;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 .contact-img {
   width: 350px;
@@ -139,7 +136,8 @@ body {
   align-items: center;
   justify-content: center;
   background: #ccc;
-  margin: 0;
+  margin: 42px 0 42px 0;
+  margin-left: 24px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -157,6 +155,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 20px;
 }
 .contact-form {
   display: flex;
@@ -193,6 +192,7 @@ body {
   align-items: center;
   gap: 7px;
 }
+
 footer {
   width: 100%;
   text-align: center;
