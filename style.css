@@ -1,17 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Noto Sans JP', 'Arial', sans-serif;
+  color: #222;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+
+.sns a {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #222;
+}
+
+/* Main Visual */
+.mainvisual {
+  margin-top: 40px;
+  position: relative;
+}
+
+.mainvisual img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.main-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Works Section */
+.works {
+  margin-top: 120px;
+}
+
+.works-title {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.works-lead h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.works-lead p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.works-gallery {
+  display: grid;
+  grid-template-columns: 460px 460px;
+  grid-template-rows: 500px 500px;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.works-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section Spacing */
+.section-space {
+  height: 120px;
+}
+
+/* Contact */
 .contact-title {
   font-size: 14px;
-  width: 960px;
-  margin: 0 auto 20px auto;
-  text-align: left;
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #222;
+  margin-bottom: 20px;
 }
 
 .contact {
   display: flex;
-  width: 960px;
   height: 600px;
-  margin: 0 auto;
   background-color: #e8e8e8;
 }
 
@@ -25,7 +115,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .contact-right {
@@ -40,12 +129,10 @@
 }
 
 .contact-right label {
-  display: block;
   font-size: 12px;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #222;
-  letter-spacing: 0.05em;
+  display: block;
 }
 
 .contact-right label:first-of-type {
@@ -57,9 +144,9 @@
   width: 420px;
   padding: 10px;
   font-size: 12px;
-  margin-bottom: 10px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background: #fff;
+  margin-bottom: 10px;
   box-sizing: border-box;
 }
 
@@ -69,10 +156,10 @@
 }
 
 .send-row {
-  margin-top: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
+  margin-top: 40px;
+  height: 40px;
 }
 
 .send-row button {
@@ -88,17 +175,13 @@
 .send-row span {
   font-size: 14px;
   margin-left: 14px;
-  color: #222;
 }
 
+/* Footer */
 footer {
-  margin-top: 120px;
   text-align: center;
   font-size: 10px;
   color: #aaa;
   letter-spacing: 0.05em;
-}
-
-footer p {
-  margin: 20px 0 40px 0;
+  margin-top: 20px;
 }
