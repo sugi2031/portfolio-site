@@ -5,50 +5,28 @@ body {
   font-family: 'Noto Sans JP', 'Arial', sans-serif;
   color: #333;
 }
+
+/* 中央寄せラッパー */
 .container {
-  width: 1000px;
+  width: 900px;      /* mainvisualのimgと同じ幅に */
   margin: 0 auto;
   background: #f4f4f4;
 }
 
-.header-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0 0 0;
-}
+/* ---（省略：header, sns, mainvisualなど現状どおりでOK）--- */
 
-.header-bar h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.sns {
-  display: flex;
-  gap: 16px;
-  margin-right: 6px;
-}
-.sns a {
-  color: #333;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-/* MAIN VISUAL */
+/* メインビジュアル */
 .mainvisual {
   position: relative;
   margin-top: 18px;
 }
-
 .mainvisual img {
   display: block;
   width: 100%;
   height: 310px;
   object-fit: cover;
+  border-radius: 0;
 }
-
 .maintext {
   position: absolute;
   top: 35px;
@@ -63,55 +41,34 @@ body {
 /* WORKS */
 .works {
   background: #fff;
-  padding: 60px 0 0 0;
+  padding: 50px 0 0 0;
 }
+.works h2 { ... } /* 省略、現状どおり */
+.works .subtitle { ... }
+.works .description { ... }
 
-.works h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 0 10px 0;
-  letter-spacing: 0.2em;
-  text-align: left;
-}
-
-.works .subtitle {
-  font-size: 20px;
-  margin: 0 0 18px 0;
-  font-weight: bold;
-  letter-spacing: 0.02em;
-}
-
-.works .description {
-  font-size: 14px;
-  line-height: 1.7;
-  max-width: 780px;
-  margin: 0 0 30px 0;
-}
-
+/* ギャラリーをmainvisualと幅ピッタリで両端揃える */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 70px;  /* ←左右の間隔を広め */
-  row-gap: 62px;     /* ←上下の間隔も広め */
-  justify-content: center;
-  align-items: center;
-  margin: 60px auto 0 auto; /* 上の余白も広げる */
-  max-width: 730px;         /* ←見本に近い幅 */
+  gap: 40px 40px;
+  margin: 40px 0 0 0;      /* ← 左右マージン不要 */
+  width: 100%;              /* ← .containerの幅いっぱい */
+  justify-items: center;    /* 水平方向中央寄せ */
+  align-items: center;      /* 垂直方向中央寄せ */
 }
-
 .gallery-item {
   width: 320px;
   height: 320px;
   background: #eee;
   overflow: hidden;
   border-radius: 0;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
-
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -120,19 +77,4 @@ body {
   display: block;
 }
 
-/* スマホ対応 */
-@media screen and (max-width: 900px) {
-  .container { width: 98vw; }
-  .gallery {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 18px;
-    max-width: 340px;
-  }
-  .gallery-item {
-    width: 100%;
-    height: 220px;
-  }
-}
-
-/* CONTACT・フッターは既存でOK */
+/* 以下、CONTACT/フッターなどは現状どおりでOK */
