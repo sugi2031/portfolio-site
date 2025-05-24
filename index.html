@@ -8,14 +8,13 @@
 </head>
 <body>
   <div class="container">
-    <!-- WORKSギャラリー -->
+    <!-- WORKSセクション -->
     <section class="works">
       <div class="works-title">| WORKS</div>
       <div class="works-lead">
         <h2>The world is always a decisive moment</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam...</p>
       </div>
-      <!-- ギャラリー2x2 -->
       <div class="works-gallery">
         <div class="works-img"><img src="img/photo1.jpg" alt="photo1"></div>
         <div class="works-img"><img src="img/photo2.jpg" alt="photo2"></div>
@@ -23,50 +22,48 @@
         <div class="works-img"><img src="img/photo4.jpg" alt="photo4"></div>
       </div>
     </section>
-  </div>
 
-  <!-- photo3/4の下に120px空白 -->
-  <div class="section-space"></div>
+    <!-- 120px空白 -->
+    <div class="section-space"></div>
 
-  <!-- CONTACTタイトル（960px 左寄せ） -->
-  <div class="contact-title-outside">| CONTACT</div>
+    <!-- CONTACT見出し -->
+    <div class="contact-title">| CONTACT</div>
 
-  <!-- CONTACTセクション -->
-  <section class="contact-outer">
-    <div class="contact-inner">
-      <div class="contact-img">
-        <img src="img/photo5.jpg" alt="contact">
+    <!-- CONTACTセクション -->
+    <section class="contact">
+      <div class="contact-inner">
+        <div class="contact-img">
+          <img src="img/photo5.jpg" alt="contact">
+        </div>
+        <div class="contact-form-area">
+          <form class="contact-form">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name">
+            <label for="email">EMAIL ADDRESS</label>
+            <input type="email" id="email" name="email">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="send-row">
+              <button type="submit"><i class="fas fa-location-arrow"></i></button>
+              <span class="send-label">SEND</span>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="contact-form-area">
-        <form class="contact-form">
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name">
-          <label for="email">EMAIL ADDRESS</label>
-          <input type="email" id="email" name="email">
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message"></textarea>
-          <div class="send-row">
-            <button type="submit"><i class="fas fa-location-arrow"></i></button>
-            <span class="send-label">SEND</span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- contactの下に120px空白 -->
-  <div class="section-space"></div>
+    <!-- 120px空白 -->
+    <div class="section-space"></div>
 
-  <!-- photo5配置 -->
-  <div class="container">
+    <!-- photo5単独表示（再利用） -->
     <div class="photo5-bottom">
-      <img src="img/photo5.jpg" alt="photo5">
+      <img src="img/photo5.jpg" alt="photo5 bottom">
     </div>
-  </div>
 
-  <!-- フッター -->
-  <footer>
-    <div class="footer-text">&copy; 2021 PORTFOLIO DESIGN – ALL RIGHTS RESERVED</div>
-  </footer>
+    <!-- footer -->
+    <footer>
+      <div class="footer-text">&copy; 2021 PORTFOLIO DESIGN – ALL RIGHTS RESERVED</div>
+    </footer>
+  </div>
 </body>
 </html>
