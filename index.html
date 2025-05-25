@@ -102,6 +102,14 @@
       margin: 0 auto;
       max-width: 960px;
     }
+
+    .contact-label {
+      display: flex;
+      align-items: center;
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
+
     .contact-inner {
       display: flex;
     }
@@ -147,11 +155,6 @@
       background: none;
       border: none;
       cursor: pointer;
-    }
-
-    .contact-label-section {
-      margin-top: 120px;
-      margin-bottom: 120px; /* ← ここがポイント */
     }
 
     .footer {
@@ -214,17 +217,15 @@
     </div>
   </section>
 
-  <!-- CONTACT ラベルセクション -->
-  <div class="contact-label-section">
-    <div class="container section-header">
-      <span class="section-bar">|</span>
-      <span class="section-title">CONTACT</span>
-    </div>
+  <!-- CONTACT ラベル -->
+  <div class="contact-label">
+    <span class="section-bar">|</span>
+    <span class="section-title">CONTACT</span>
   </div>
 
   <!-- CONTACT 本体 -->
   <section class="contact">
-    <div class="container contact-inner">
+    <div class="contact-inner">
       <div class="contact-image">
         <img src="img/photo5.jpg" alt="Contact">
       </div>
