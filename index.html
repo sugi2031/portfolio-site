@@ -13,6 +13,7 @@
       color: #333;
       min-width: 960px;
     }
+    /* ---- HEADER ---- */
     .header {
       width: 960px;
       margin: 0 auto;
@@ -36,6 +37,7 @@
       display: block;
     }
 
+    /* ---- HERO ---- */
     .hero {
       width: 960px;
       height: 420px;
@@ -62,6 +64,7 @@
       margin-bottom: 0;
     }
 
+    /* ---- WORKS ---- */
     .works {
       width: 960px;
       margin: 120px auto 0;
@@ -69,7 +72,7 @@
     .section-header {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 20px;  /* WORKS下 20px */
     }
     .section-bar {
       font-size: 20px;
@@ -86,7 +89,7 @@
     .works-heading {
       font-size: 28px;
       font-weight: 400;
-      margin-bottom: 10px;
+      margin-bottom: 10px;  /* 見出し下 10px */
       line-height: 1.2;
     }
     .works-text {
@@ -94,7 +97,8 @@
       line-height: 1.6;
       color: #666;
       margin-bottom: 40px;
-      max-width: 880px;
+      width: 600px;
+      margin-left: 0; /* 画像と左端揃え */
     }
     .works-grid {
       display: grid;
@@ -111,6 +115,7 @@
       display: block;
     }
 
+    /* ---- CONTACT ---- */
     .contact {
       width: 960px;
       margin: 120px auto 0;
@@ -197,12 +202,13 @@
       padding: 0;
       margin: 0 auto;
       display: block;
+      text-align: center;
+      letter-spacing: 2px;
     }
-    .btn-send::before {
-      content: '▶︎';
-      font-size: 18px;
-      margin-right: 8px;
+    .btn-icon {
+      display: inline-block;
       vertical-align: middle;
+      margin-right: 8px;
     }
     .footer {
       width: 960px;
@@ -281,7 +287,14 @@
         <label for="message">MESSAGE</label>
         <textarea id="message" name="message"></textarea>
 
-        <button type="submit" class="btn-send">SEND</button>
+        <button type="submit" class="btn-send">
+          <span class="btn-icon">
+            <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="0,9 28,0 28,18" fill="#333" />
+            </svg>
+          </span>
+          SEND
+        </button>
       </form>
     </div>
   </section>
