@@ -17,14 +17,14 @@
       max-width: 960px;
       width: 100%;
       margin: 0 auto;
+      padding-left: 16px;
+      padding-right: 16px;
     }
     .header {
       padding-top: 40px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-left: 16px;
-      padding-right: 16px;
       box-sizing: border-box;
     }
     .logo { font-size: 20px; font-weight: 700; }
@@ -42,8 +42,6 @@
     .works {
       width: 100%;
       margin: 120px auto 0;
-      padding-left: 16px;
-      padding-right: 16px;
       box-sizing: border-box;
     }
     .section-header { display: flex; align-items: center; margin-bottom: 20px; }
@@ -54,8 +52,6 @@
       font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 120px;
       width: 100%; max-width: 600px; margin-left: 0;
     }
-
-    /* WORKSグリッド PC（設計書サイズ＆cover） */
     .works-grid {
       display: grid;
       grid-template-columns: 460px 460px;
@@ -75,8 +71,6 @@
     .contact {
       width: 100%;
       margin: 120px auto 0;
-      padding-left: 16px;
-      padding-right: 16px;
       box-sizing: border-box;
     }
     .contact-label {
@@ -179,19 +173,17 @@
       color: #999;
       font-size: 10px;
       padding-bottom: 20px;
-      padding-left: 16px;
-      padding-right: 16px;
       box-sizing: border-box;
     }
     .footer hr { border: none; border-top: 1px solid #ccc; margin-bottom: 40px; margin-top: 0; }
 
-    /* ------- レスポンシブ対応：画像をcontain＋比率維持で上下切れない ------- */
+    /* ------- レスポンシブ対応：スマホ・タブレットで両端余白広めに ------- */
     @media (max-width: 980px) {
       .header, .hero, .works, .contact, .footer {
         max-width: 100%;
         width: 100%;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 32px;
+        padding-right: 32px;
       }
       .hero { height: 240px; }
       .hero-text { left: 20px; font-size: 22px; }
@@ -229,8 +221,8 @@
 
     @media (max-width: 600px) {
       .header, .hero, .works, .contact, .footer {
-        padding-left: 4px;
-        padding-right: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
       }
       .hero { height: 120px; }
       .hero-text { left: 8px; font-size: 13px; }
