@@ -21,13 +21,23 @@ body {
 }
 .header-inner {
   display: flex;
-  justify-content: space-between;
+  .header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+  }
+  
   align-items: center;
-}
-.logo {
-  font-size: 20px;
-  font-weight: 700;
-}
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .sns {
+    margin-left: auto;
+  }
+  
 .sns img {
   width: 24px;
   height: 24px;
@@ -52,13 +62,14 @@ body {
   top: 40px;
   left: 40px;
   color: #FFFFFF;
-  width: 880px; /* 960 - 左右padding40px */
+  width: 880px;
 }
 
 .hero-text p {
   font-size: 38px;
   margin-bottom: 10px;
 }
+
 
 /* WORKS */
 .works {
