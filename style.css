@@ -159,3 +159,7 @@ body {
   border-top: 1px solid #CCCCCC;
   margin-bottom: 40px;
 }
+/* works-grid内の4番目の画像（photo4）だけ縦500px */
+.works-grid img:nth-child(4) {
+  height: 500px;
+}
