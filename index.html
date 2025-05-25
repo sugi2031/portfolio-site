@@ -55,7 +55,7 @@
       width: 100%; max-width: 600px; margin-left: 0;
     }
 
-    /* WORKSグリッド */
+    /* WORKSグリッド PC（設計書サイズ＆cover） */
     .works-grid {
       display: grid;
       grid-template-columns: 460px 460px;
@@ -185,7 +185,7 @@
     }
     .footer hr { border: none; border-top: 1px solid #ccc; margin-bottom: 40px; margin-top: 0; }
 
-    /* ------- レスポンシブ対応 -------- */
+    /* ------- レスポンシブ対応：画像をcontain＋比率維持で上下切れない ------- */
     @media (max-width: 980px) {
       .header, .hero, .works, .contact, .footer {
         max-width: 100%;
@@ -197,15 +197,15 @@
       .hero-text { left: 20px; font-size: 22px; }
       .works-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 220px);
+        grid-template-rows: repeat(4, auto);
         width: 100%;
         gap: 20px 0;
       }
       .works-grid img {
         width: 100%;
-        height: 220px;
-        max-width: 100%;
-        object-fit: cover;
+        height: auto;
+        object-fit: contain;
+        background: #fff;
       }
       .works-text { font-size: 13px; max-width: 100%; margin-bottom: 40px; }
       .contact-inner {
@@ -216,7 +216,8 @@
       .contact-image,
       .contact-image img {
         width: 100%;
-        height: 180px;
+        height: auto;
+        object-fit: contain;
       }
       .contact-form {
         width: 100%;
@@ -236,7 +237,7 @@
       .works-heading { font-size: 14px; }
       .works-text { font-size: 10px; margin-bottom: 20px; }
       .section-bar, .contact-label::before { font-size: 13px; }
-      .works-grid img, .contact-image img { height: 80px; }
+      .works-grid img, .contact-image img { height: auto; }
       .footer { font-size: 8px; }
     }
   </style>
