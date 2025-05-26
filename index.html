@@ -25,7 +25,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 40px; /* mainとの間隔を40pxに固定 */
+      margin-bottom: 40px;
     }
     .logo { font-size: 20px; font-weight: 700; }
     .sns { display: flex; gap: 20px; margin-top: 4px; }
@@ -61,7 +61,7 @@
       transform: translateY(-50%);
       color: #fff;
       font-size: 38px;
-      line-height: 1.2;
+      line-height: 1.0;   /* 行間を詰める */
       font-weight: 400;
       z-index: 2;
       padding-left: 40px;
@@ -73,7 +73,7 @@
     }
     .hero-text p {
       font-size: 38px;
-      line-height: 1.2;
+      line-height: 1.0;    /* 行間を詰める */
       font-weight: 400;
       margin-bottom: 0;
     }
@@ -117,7 +117,7 @@
     .footer { max-width: 960px; margin: 120px auto 0; text-align: center; color: #999; font-size: 10px; padding-bottom: 20px; box-sizing: border-box; }
     .footer hr { border: none; border-top: 1px solid #ccc; margin-bottom: 40px; margin-top: 0; }
 
-    /* レスポンシブ：スマホで画像が小さくなりすぎないよう最低幅を確保 */
+    /* レスポンシブ */
     @media (max-width: 980px) {
       .header, .works, .contact, .footer {
         max-width: 100%;
