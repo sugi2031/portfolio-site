@@ -1,0 +1,437 @@
+/* --- フォント設定 --- */
+body {
+  font-family: "Noto Serif JP", serif !important;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #303030;
+}
+
+h1, h2, h3, h4, p {
+  font-family: "Noto Serif JP", serif;
+  color: #303030;
+  line-height: 1.4;
+}
+
+/* --- ヘッダー・ナビ --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+.nav-menu a {
+  color: #303030;
+}
+.nav-menu a:hover {
+  color: #B48736;
+}
+
+/* --- フッター --- */
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 32px;
+}
+
+/* --- ロゴ --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.2rem;
+  padding: 16px 0;
+}
+.logo-img {
+  height: 120px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* --- SNSアイコン --- */
+.sns-icons a {
+  margin: 0 8px;
+  color: #9B6A3F;
+}
+.sns-icons a:hover {
+  text-decoration: underline;
+}
+
+/* --- 汎用設定 --- */
+html {
+  scroll-behavior: smooth;
+}
+section:target::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 48px 0 24px;
+}
+
+/* --- ボタン --- */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #B48736;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  background-color: #9C7B54;
+}
+
+/* --- ヒーロー --- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 53.33vh;
+  overflow: hidden;
+}
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+.hero .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.hero-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 24px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* --- 商品エリア --- */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-card {
+  flex: 1 1 calc(25% - 32px);
+  max-width: calc(25% - 32px);
+  text-align: center;
+}
+.product-card img {
+  width: 300px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* --- 黒枝豆ページのレイアウト --- */
+.edamame-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.edamame-text a.btn-primary {
+  display: inline-block;
+  margin-top: 24px;
+  background-color: #B48736;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.edamame-text a.btn-primary:hover {
+  background-color: #9C7B54;
+}
+
+/* --- レスポンシブ対応 --- */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .hero-text {
+    top: 60%;
+    width: 90%;
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .sns-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 16px auto;
+    text-align: center;
+  }
+
+  .map-wrapper {
+    max-width: 900px;      /* 適宜お好みで数値調整 */
+    margin: 0 auto 32px auto; /* 上下余白も追加、中央寄せ */
+    padding: 0 16px;       /* 画面幅いっぱい時も余白キープ */
+}
+
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+
+  .about-single, .shop-info, .tamago-text {
+    text-align: center;
+    padding: 16px;
+  }
+
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-row img {
+    width: 90%;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #303030;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #FFFFFF;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    list-style: none;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+    color: #303030;
+  }
+}
+
+.product-card h3 a {
+  color: #303030;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.product-card h3 a:hover {
+  color: #B48736;
+}
+
+.about-single {
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.news-list li {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.map-wrapper {
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  padding: 0 16px;
+}
+
+.shop-info {
+  text-align: center;
+  max-width: 900px;  /* 地図幅と揃える場合は追加。数値はお好みで */
+  margin: 0 auto;    /* セクション自体を中央寄せ */
+}
+
+.shop-info,
+.shop-info a {
+  color: #303030 !important;
+}
+.product-detail-images {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap; /* レスポンシブ用 */
+}
+.product-detail-images img {
+  width: 300px;         /* 適宜調整 */
+  height: 225px;        /* お好みで比率調整可 */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+@media screen and (max-width: 900px) {
+  .product-detail-images img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+  .product-detail-images {
+    gap: 12px;
+  }
+}
+
+.tamago-image-row,
+.kuroedamame-image-row,
+.asparagus-image-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.tamago-image-row img,
+.kuroedamame-image-row img,
+.asparagus-image-row img {
+  width: 300px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+@media screen and (max-width: 900px) {
+  .tamago-image-row img,
+  .kuroedamame-image-row img,
+  .asparagus-image-row img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+  .tamago-image-row,
+  .kuroedamame-image-row,
+  .asparagus-image-row {
+    gap: 12px;
+  }
+}
+.tamago-text,
+.kuroedamame-text,
+.asparagus-text {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  font-size: 18px;
+}
